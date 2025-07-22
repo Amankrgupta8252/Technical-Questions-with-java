@@ -1,3 +1,10 @@
+/*
+
+🔠 1. Longest Palindromic Substring Input: "babad" Output: "bab" (or "aba") 
+💡 Longest substring dhoondo jo palindromic ho.
+
+ */
+
 import java.util.*;
 
 public class LongestPalindrome {
