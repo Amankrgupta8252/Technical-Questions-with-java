@@ -1,7 +1,7 @@
 # Technical-Questions-with-java
 
 
-1.	Array:
+# 1.	Array:
 e.g. Two Sum, Kadane's Algorithm, Rotate Array
 
 ✅ 1. Two Sum
@@ -67,7 +67,7 @@ Output: 3
 
 
 
-2.	String:
+# 2.	String:
 e.g. Longest Palindrome, Anagram Check, Substring without Repeating Characters
 
 ✅ Top String Questions with Input-Output Format
@@ -114,21 +114,21 @@ Output: "c"
 
 
 
-3.	Linked List:
+# 3.	Linked List:
 e.g. Reverse Linked List, Detect Loop, Merge Two Lists
-4.	Stack/Queue:
+# 4.	Stack/Queue:
 e.g. Valid Parentheses, Next Greater Element, Sliding Window Maximum
-5.	Tree:
+# 5.	Tree:
 e.g. Inorder Traversal, Height of Tree, Lowest Common Ancestor
-6.	Graph:
+# 6.	Graph:
 e.g. BFS/DFS, Cycle Detection, Dijkstra’s Algorithm
-7.	Dynamic Programming:
+# 7.	Dynamic Programming:
 e.g. Fibonacci, Longest Common Subsequence, 0/1 Knapsack
-8.	Sorting/Searching:
+# 8.	Sorting/Searching:
 e.g. Binary Search, Quick Sort, Merge Sort
-9.	Greedy/Backtracking:
+# 9.	Greedy/Backtracking:
 e.g. N-Queens, Subset Sum, Activity Selection
-10.	Custom / Interview Type Problem
+# 10.	Custom / Interview Type Problem
 You can tell me the company name (like Amazon, Google, TCS) or a question statement.
 
 
