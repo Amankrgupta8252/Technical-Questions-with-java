@@ -116,6 +116,150 @@ Output: "c"
 
 # 3.	Linked List:
 e.g. Reverse Linked List, Detect Loop, Merge Two Lists
+
+
+
+✅ Linked List Based Questions
+________________________________________
+
+🔁 1. Reverse Linked List
+Input: 1 → 2 → 3 → 4 → 5
+Output: 5 → 4 → 3 → 2 → 1
+💡 Reverse the list in-place.
+________________________________________
+
+🔁 2. Detect Loop in Linked List
+Input: 1 → 2 → 3 → 4 → 2 (loop back to node 2)
+Output: true
+💡 Use Floyd’s Cycle Detection Algorithm (slow & fast pointer).
+________________________________________
+
+
+➕ 3. Merge Two Sorted Linked Lists
+Input:
+List1: 1 → 3 → 5
+List2: 2 → 4 → 6
+Output: 1 → 2 → 3 → 4 → 5 → 6
+💡 Merge without using extra space (recursively or iteratively).
+________________________________________
+
+
+🔄 4. Remove N-th Node from End
+Input: 1 → 2 → 3 → 4 → 5, n = 2
+Output: 1 → 2 → 3 → 5
+💡 2-pointer approach, maintain a gap of n.
+________________________________________
+
+
+🎯 5. Find Middle of Linked List
+Input: 1 → 2 → 3 → 4 → 5
+Output: 3
+💡 Use slow and fast pointer.
+________________________________________
+
+
+🔁 6. Check if Linked List is Palindrome
+Input: 1 → 2 → 2 → 1
+Output: true
+💡 Reverse second half and compare.
+________________________________________
+
+
+🔁 7. Intersection Point of Two Linked Lists
+Input: Two lists merge at node with value 8
+Output: 8
+💡 Get lengths, align, then move together.
+________________________________________
+
+
+🔀 8. Remove Duplicates from Sorted List
+Input: 1 → 1 → 2 → 3 → 3
+Output: 1 → 2 → 3
+________________________________________
+
+
+🔄 9. Rotate Linked List
+Input: 1 → 2 → 3 → 4 → 5, k = 2
+Output: 4 → 5 → 1 → 2 → 3
+💡 Connect list to itself, break at right point.
+________________________________________
+
+🔁 10. Remove Loop in Linked List
+Input: 1 → 2 → 3 → 4 → 5 → 2 (loop)
+Output: Loop removed.
+💡 Pehle loop detect karo (Floyd’s Algorithm), phir uska starting node identify karke usse null karo.
+________________________________________
+
+
+🔄 11. Reverse Linked List in Groups of K
+Input: 1 → 2 → 3 → 4 → 5 → 6, k = 2
+Output: 2 → 1 → 4 → 3 → 6 → 5
+💡 K nodes reverse karo har group mein using recursion or iteration.
+________________________________________
+
+🧮 12. Add Two Numbers Represented by Linked Lists
+Input:
+List1: 2 → 4 → 3 (represents 342)
+List2: 5 → 6 → 4 (represents 465)
+Output: 7 → 0 → 8 (342 + 465 = 807)
+________________________________________
+
+🚀 13. Sort a Linked List
+Input: 4 → 2 → 1 → 3
+Output: 1 → 2 → 3 → 4
+💡 Merge Sort use karo (T.C. O(n log n), S.C. O(log n) recursion stack)
+________________________________________
+
+📐 14. Copy List with Random Pointer
+Each node has next and random pointer.
+Input: Deep copy banao with both pointers preserved.
+💡 Use a hashmap or interleave technique.
+________________________________________
+
+🔁 15. Find Length of Loop
+If loop exists, us loop ke nodes count karo.
+Output: Number of nodes in the loop.
+________________________________________
+
+🧵 16. Flatten Linked List with Next and Bottom Pointers
+Input:
+________________________________________
+
+rust
+Copy
+Edit
+5 -> 10 -> 19 -> 28  
+|     |     |     |  
+7     20    22    35  
+|           |     |  
+8           50    40  
+|                 |  
+30                45  
+Output: Flattened sorted single list.
+________________________________________
+
+🔄 17. Segregate Even and Odd Nodes
+Input: 17 → 15 → 8 → 12 → 10 → 5 → 4
+Output: 8 → 12 → 10 → 4 → 17 → 15 → 5
+________________________________________
+
+💡 18. Detect and Remove Duplicate Nodes in Unsorted List
+Input: 10 → 12 → 11 → 11 → 12 → 11 → 10
+Output: 10 → 12 → 11
+________________________________________
+
+🚨 19. Check if Two Linked Lists are Identical
+Input:
+List1: 1 → 2 → 3
+List2: 1 → 2 → 3
+Output: true
+________________________________________
+
+
+
+
+
+
 # 4.	Stack/Queue:
 e.g. Valid Parentheses, Next Greater Element, Sliding Window Maximum
 # 5.	Tree:
