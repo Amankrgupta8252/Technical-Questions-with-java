@@ -36,5 +36,6 @@ public class MergeTwoLinkedList {
         Collections.sort(MergedList);
         System.out.println("Merged Sorted Linked List :"+ MergedList);
 
+        sc.close();
     }
 }
