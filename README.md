@@ -184,84 +184,135 @@ Output: 4 → 5 → 1 → 2 → 3
 💡 Connect list to itself, break at right point.
 ________________________________________
 
-🔁 10. Remove Loop in Linked List
-Input: 1 → 2 → 3 → 4 → 5 → 2 (loop)
-Output: Loop removed.
-💡 Pehle loop detect karo (Floyd’s Algorithm), phir uska starting node identify karke usse null karo.
-________________________________________
-
-
-🔄 11. Reverse Linked List in Groups of K
+🔄 10. Reverse Linked List in Groups of K
 Input: 1 → 2 → 3 → 4 → 5 → 6, k = 2
 Output: 2 → 1 → 4 → 3 → 6 → 5
 💡 K nodes reverse karo har group mein using recursion or iteration.
 ________________________________________
 
-🧮 12. Add Two Numbers Represented by Linked Lists
+🧮 11. Add Two Numbers Represented by Linked Lists
 Input:
 List1: 2 → 4 → 3 (represents 342)
 List2: 5 → 6 → 4 (represents 465)
 Output: 7 → 0 → 8 (342 + 465 = 807)
 ________________________________________
 
-🚀 13. Sort a Linked List
+🚀 12. Sort a Linked List
 Input: 4 → 2 → 1 → 3
 Output: 1 → 2 → 3 → 4
 💡 Merge Sort use karo (T.C. O(n log n), S.C. O(log n) recursion stack)
 ________________________________________
 
-📐 14. Copy List with Random Pointer
+📐 13. Copy List with Random Pointer
 Each node has next and random pointer.
 Input: Deep copy banao with both pointers preserved.
 💡 Use a hashmap or interleave technique.
 ________________________________________
 
-🔁 15. Find Length of Loop
+🔁 14. Find Length of Loop
 If loop exists, us loop ke nodes count karo.
-Output: Number of nodes in the loop.
-________________________________________
+Output: Number of nodes in the loop.________________________________________
 
-🧵 16. Flatten Linked List with Next and Bottom Pointers
-Input:
-________________________________________
-
-rust
-Copy
-Edit
-5 -> 10 -> 19 -> 28  
-|     |     |     |  
-7     20    22    35  
-|           |     |  
-8           50    40  
-|                 |  
-30                45  
-Output: Flattened sorted single list.
-________________________________________
-
-🔄 17. Segregate Even and Odd Nodes
+🔄 15. Segregate Even and Odd Nodes
 Input: 17 → 15 → 8 → 12 → 10 → 5 → 4
 Output: 8 → 12 → 10 → 4 → 17 → 15 → 5
 ________________________________________
-
-💡 18. Detect and Remove Duplicate Nodes in Unsorted List
-Input: 10 → 12 → 11 → 11 → 12 → 11 → 10
-Output: 10 → 12 → 11
-________________________________________
-
-🚨 19. Check if Two Linked Lists are Identical
-Input:
-List1: 1 → 2 → 3
-List2: 1 → 2 → 3
-Output: true
-________________________________________
-
-
 
 
 
 
 # 4.	Stack/Queue:
 e.g. Valid Parentheses, Next Greater Element, Sliding Window Maximum
+
+________________________________________
+
+📦 Stack / Queue: Interview Questions (with Java Focus)
+________________________________________
+
+✅ 1. Valid Parentheses
+Input: s = "({[]})"
+Output: true
+💡 Har open bracket ka correct close bracket aana chahiye — Stack use karke match karo.
+
+
+________________________________________
+
+✅ 2. Implement Stack using Queue
+Input: push(1), push(2), pop()
+Output: 2
+💡 Queue ko use karke Stack ka behavior simulate karo (LIFO).
+________________________________________
+
+✅ 3. Implement Queue using Stack
+Input: push(1), push(2), pop()
+Output: 1
+💡 Stack ko use karke Queue ka behavior dikhana (FIFO).
+________________________________________
+
+✅ 4. Next Greater Element
+Input: [4, 5, 2, 10]
+Output: [5, 10, 10, -1]
+💡 Har element ke baad jo pehla bada number aaye — Stack + Traversal.
+________________________________________
+
+✅ 5. Daily Temperatures
+Input: [73,74,75,71,69,72,76,73]
+Output: [1,1,4,2,1,1,0,0]
+💡 Kitne din baad temperature badega? Monotonic stack use hota hai.
+________________________________________
+
+✅ 6. Min Stack
+Operations: push(2), push(0), push(3), push(0), getMin(), pop(), getMin()
+Output: 0, then 0
+💡 Stack ke saath current minimum track karo.
+________________________________________
+
+✅ 7. Evaluate Reverse Polish Notation (Postfix Expression)
+Input: ["2", "1", "+", "3", "*"]
+Output: 9
+💡 RPN evaluate karne ke liye Stack use hota hai.
+________________________________________
+
+✅ 8. Sliding Window Maximum (Queue/Deque)
+Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
+Output: [3,3,5,5,6,7]
+💡 Window ke max element ko efficient way me nikalna hai — Deque se.
+________________________________________
+
+✅ 9. Design Circular Queue
+Operations: enqueue, dequeue, front, rear, isEmpty, isFull
+💡 Queue ko array se implement karo with circular logic (front/rear wrap around).
+________________________________________
+
+✅ 10. Largest Rectangle in Histogram
+Input: [2,1,5,6,2,3]
+Output: 10
+💡 Stack se previous/next smaller bar dhoondhkar area calculate karo.
+________________________________________
+
+✅ 11. Remove K Digits to Make Smallest Number
+Input: num = "1432219", k = 3
+Output: "1219"
+💡 Stack use karke minimum banane wale digits bachaao.
+________________________________________
+
+✅ 12. Simplify Unix Path
+Input: "/a/./b/../../c/"
+Output: "/c"
+💡 Stack se valid path banate jao (.. means pop).
+________________________________________
+
+✅ 13. Rotten Oranges Problem (BFS using Queue)
+Input: Grid with 0=empty, 1=fresh, 2=rotten
+Output: Minimum minutes to rot all oranges
+💡 Multi-source BFS using queue.
+________________________________________
+
+✅ 14. Design Browser History (Back/Forward)
+Operations: visit(url), back(steps), forward(steps)
+💡 Stack use karke back/forward track karo.
+
+
 # 5.	Tree:
 e.g. Inorder Traversal, Height of Tree, Lowest Common Ancestor
 # 6.	Graph:
