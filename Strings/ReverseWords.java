@@ -20,14 +20,28 @@ public class ReverseWords {
     public static String reverseWords(String str) {
         String[] words = str.split(" ");
 
-        StringBuilder reversed = new StringBuilder();
-        for (int i = words.length - 1; i >= 0; i--) {
-            reversed.append(words[i]);
-            if (i != 0) {
-                reversed.append(" ");
-            }
+        
+        int start = 0;
+        int end = words.length - 1;
+        
+        while (start  < end) {
+            String tamp = words[start];
+            words[start] = words[end];
+            words[end] = tamp;
+            start++;
+            end--;
         }
-        return reversed.toString();
+        return String.join(" ", words);
+
+
+        // StringBuilder reversed = new StringBuilder();
+        // for (int i = words.length - 1; i >= 0; i--) {
+        //     reversed.append(words[i]);
+        //     if (i != 0) {
+        //         reversed.append(" ");
+        //     }
+        // }
+        // return reversed.toString();
 
     }
 }

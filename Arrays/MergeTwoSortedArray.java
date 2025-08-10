@@ -33,24 +33,35 @@ class MergeTwoSortedArray {
     public static int[] MergeArray(int[] nums1, int[] nums2) {
         int n1 = nums1.length;
         int n2 = nums2.length;
-        int[] mergedArray = new int[n1 + n2];
-        int i = 0, j = 0, k = 0;
+        int numslength = n1+n2;
+        int mergedArray[] = new int[numslength];
 
-        while (i < n1 && j < n2) {
-            if (nums1[i] <= nums2[j]) {
-                mergedArray[k++] = nums1[i++];
-            } else {
-                mergedArray[k++] = nums2[j++];
-            }
-        }
+       System.arraycopy(nums1, 0, mergedArray, 0, nums1.length);
+       System.arraycopy(nums2, 0, mergedArray, nums1.length, nums2.length);
 
-        while (i < n1) {
-            mergedArray[k++] = nums1[i++];
-        }
 
-        while (j < n2) {
-            mergedArray[k++] = nums2[j++];
-        }
+
+        // int i = 0, j = 0, k = 0;
+
+        // while (i < n1 && j < n2) {
+        //     if (nums1[i] <= nums2[j]) {
+        //         mergedArray[k++] = nums1[i++];
+        //     } else {
+        //         mergedArray[k++] = nums2[j++];
+        //     }
+        // }
+
+        // while (i < n1) {
+        //     mergedArray[k++] = nums1[i++];
+        // }
+
+        // while (j < n2) {
+        //     mergedArray[k++] = nums2[j++];
+        // }
+
+
+        
+        Arrays.sort(mergedArray);
 
         return mergedArray;
     }

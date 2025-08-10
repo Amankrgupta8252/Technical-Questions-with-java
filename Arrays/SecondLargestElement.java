@@ -36,14 +36,15 @@ public class SecondLargestElement {
     public static int SecondLargestElementValue(int[] nums) {
         Arrays.sort(nums); // ascending
 
-        int largest = nums[nums.length - 1];
+        int largest = nums[nums.length - 2];
+        return largest;
 
-        for (int i = nums.length - 2; i >= 0; i--) {
-            if (nums[i] < largest) {
-                return nums[i];
-            }
-        }
+        // for (int i = nums.length - 2; i >= 0; i--) {
+        //     if (nums[i] < largest) {
+        //         return nums[i];
+        //     }
+        // }
 
-        return Integer.MIN_VALUE; // sab element same the
+        // return Integer.MIN_VALUE; // sab element same the
     }
 }

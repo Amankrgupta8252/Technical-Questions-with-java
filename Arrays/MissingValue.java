@@ -18,14 +18,13 @@ public class MissingValue {
         System.out.println("Enter the numbers (0 to " + n + "):");
         for (int i = 0; i <n; i++) {
             nums[i] = sc.nextInt();
-
         }
         System.out.println("Input array: " + Arrays.toString(nums));
-        int missingNumber = findMissingNumber(nums, n);
+        int missingNumber = findMissingNumber(nums);
         System.out.println("Missing number: " + missingNumber);
         sc.close();
     }
-    public static int findMissingNumber(int[] nums, int n) {
+    public static int findMissingNumber(int[] nums) {
         // int expectedSum = n * (n + 1) / 2;
         
         // int actualSum = 0;
@@ -40,7 +39,7 @@ public class MissingValue {
                 return i; 
             }
         }
-        return n; 
+        return ' '; 
     }
     
 }

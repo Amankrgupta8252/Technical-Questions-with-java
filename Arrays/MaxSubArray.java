@@ -29,13 +29,7 @@ public class MaxSubArray {
 
         for (int i = 0; i < nums.length; i++) {
             currentSum = Math.max(nums[i], currentSum + nums[i]);
-
-            // if (currentSum < 0) {
-            //     currentSum = nums[i]; // Reset current sum if it becomes negative
-            // } else {
-            //     currentSum += nums[i]; // Add current element to the current sum
-            // }
-
+            
             maxSum = Math.max(maxSum, currentSum); 
         }
         return maxSum; 

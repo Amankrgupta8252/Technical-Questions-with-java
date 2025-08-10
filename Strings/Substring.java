@@ -1,3 +1,10 @@
+/*
+
+Input: acdddabcdef
+Output: 6  // substring = "abcdef"
+
+ */
+
 import java.util.*;
 
 public class Substring {
@@ -11,21 +18,17 @@ public class Substring {
     }
 
     public static int lengthOfLongestSubstring(String s){
+         
         Set<Character> seen = new HashSet<>();
-        int maxlength = 0; 
-        int i = 0, j = 0;
 
-        while (j < s.length()) {
-            if (!seen.contains(s.charAt(j))) {
-                seen.add(s.charAt(j));
-                maxlength = Math.max(maxlength, j - i + 1);
-                j++;
-            }else{
-                seen.remove(s.charAt(i));
-                i++;
+        for (int i = 0; i < s.length(); i++) {
+            if (!seen.contains(s.charAt(i))) {
+                seen.add(s.charAt(i));
             }
         }
-        return maxlength;
+
+        return seen.size();
+
         
     }
 }

@@ -28,7 +28,7 @@ public class checkChar {
                     s2 = s2.substring(0, j) + s2.substring(j + 1);
                     break;
                 }
-
+                
             }
         }
         return s2.isEmpty();
