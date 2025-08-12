@@ -24,9 +24,8 @@ public class MiddleOfLinkedList {
         int Size = linkedList.size();
 
         if (Size %2 == 0) {
-            int mid1 = Size / 2 -1;
-            int mid2 = Size / 2;
-            System.out.println("Middle elements: " +linkedList.get(mid1)+ " and " + linkedList.get(mid2));
+            int mid2 = Size + 1  / 2;
+            System.out.println("Middle elements: " + linkedList.get(mid2));
         } 
         else {
             int mid = Size / 2;

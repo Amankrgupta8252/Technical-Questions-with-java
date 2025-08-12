@@ -18,6 +18,7 @@ public class CountVowelsConsonents {
 
         String result = countVowelsAndConsonants(str);
         System.out.println(result);
+        sc.close();
     }
     public static String countVowelsAndConsonants(String str) {
 

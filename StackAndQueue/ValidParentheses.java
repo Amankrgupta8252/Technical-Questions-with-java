@@ -25,16 +25,13 @@ public class ValidParentheses {
         matchingBrackets.put('[', ']');
         for (char ch : s.toCharArray()) {
             if (matchingBrackets.containsKey(ch)) {
-                // If it's an opening bracket, push it onto the stack
                 stack.push(ch);
             } else if (matchingBrackets.containsValue(ch)) {
-                // If it's a closing bracket, check for matching opening bracket
                 if (stack.isEmpty() || ch != matchingBrackets.get(stack.pop())) {
-                    return false; // Mismatch found
+                    return false; 
                 }
             }
         }
-        // If stack is empty, all brackets were matched correctly
         return stack.isEmpty();
     }
 }

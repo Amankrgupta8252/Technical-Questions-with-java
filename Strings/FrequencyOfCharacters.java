@@ -19,29 +19,20 @@ public class FrequencyOfCharacters {
 
     }
     public static String CountCharOfString(String str) {
-        int count = 0;
-
-        for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == str.charAt(i + 1)){
-                count++;
-                i--;
+        
+        for(int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            int count = 1;
+            for (int j = i + 1; j < str.length(); j++) {
+                if (ch == str.charAt(j)) {
+                    count++;
+                    str = str.substring(0, j) + str.substring(j + 1);
+                    j--;
+                }
             }
-            System.out.println(str.charAt(i) + ":" +count);
+            System.out.println(ch + ": " + count);
         }
         return str;
-        
-        // for(int i = 0; i < str.length(); i++) {
-        //     char ch = str.charAt(i);
-        //     int count = 1;
-        //     for (int j = i + 1; j < str.length(); j++) {
-        //         if (ch == str.charAt(j)) {
-        //             count++;
-        //             str = str.substring(0, j) + str.substring(j + 1);
-        //             j--;
-        //         }
-        //     }
-        //     System.out.println(ch + ": " + count);
-        // }
-        // return str;
     }
 }
+

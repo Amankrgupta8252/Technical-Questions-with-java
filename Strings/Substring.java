@@ -27,7 +27,7 @@ public class Substring {
             }
         }
 
-        return seen.size();
+        return seen.size(); 
 
         
     }
