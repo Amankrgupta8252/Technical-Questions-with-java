@@ -10,7 +10,9 @@ Output: [2,2]
  
  */
 import java.util.*;
+
 public class IntersectionArray {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of elements in first array: ");
@@ -30,28 +32,27 @@ public class IntersectionArray {
         }
 
         int[] IntersectionofTwoArrays = IntersectionofTwoArrays(nums1, nums2);
-        System.out.println("Intersection of Two Arrays: " + Arrays.toString(IntersectionofTwoArrays));
+        System.out.println(Arrays.toString(IntersectionofTwoArrays));
+        sc.close();
     }
-    public static int[] IntersectionofTwoArrays(int[] nums1, int[] nums2) {
-        
-        List<Integer> interstion = new ArrayList<>();
 
+    public static int[] IntersectionofTwoArrays(int[] nums1, int[] nums2) {
+
+        List<Integer> intersection = new ArrayList<>();
         for (int i = 0; i < nums1.length; i++) {
             for (int j = 0; j < nums2.length; j++) {
                 if (nums1[i] == nums2[j]) {
-                    interstion.add(nums1[i]);
-                    nums2[j] = Integer.MIN_VALUE; // Mark as visited
-                    break; // Move to next element in nums1
+                    intersection.add(nums1[i]);
+                    nums2[j] = Integer.MIN_VALUE;
+                    break;
                 }
             }
         }
-        
-        int result[] = new int[interstion.size()];
-        for (int i = 0; i < interstion.size(); i++) {
-            result[i] = interstion.get(i);
+        int result[] = new int[intersection.size()];
+        for (int i = 0; i < intersection.size(); i++) {
+            result[i] = intersection.get(i);
         }
         return result;
 
     }
 }
-

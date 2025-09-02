@@ -8,7 +8,9 @@ Output: 6
  */
 
 import java.util.*;
+
 public class MaxSubArray {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of elements: ");
@@ -23,16 +25,17 @@ public class MaxSubArray {
         System.out.println("Maximum Subarray Sum: " + maxSumArray);
         sc.close();
     }
+
     public static int findMaxSubArray(int[] nums) {
         int maxSum = nums[0];
         int currentSum = nums[0];
 
         for (int i = 0; i < nums.length; i++) {
             currentSum = Math.max(nums[i], currentSum + nums[i]);
-            
-            maxSum = Math.max(maxSum, currentSum); 
+
+            maxSum = Math.max(maxSum, currentSum);
         }
-        return maxSum; 
+        return maxSum;
     }
-    
+
 }

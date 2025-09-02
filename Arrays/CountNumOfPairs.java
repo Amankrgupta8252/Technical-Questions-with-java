@@ -6,9 +6,10 @@ Output: 3
 
  */
 
-
 import java.util.*;
+
 public class CountNumOfPairs {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of elements in the array: ");
@@ -24,6 +25,7 @@ public class CountNumOfPairs {
         System.out.println("Number of pairs with sum " + targetSum + ": " + count);
         sc.close();
     }
+
     public static int CountPairsWithGivenSum(int[] nums, int targetSum) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {

@@ -8,7 +8,9 @@ Output: [5,4,3,2,1]
  */
 
 import java.util.*;
+
 public class ReverseArray {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of elements in the array: ");
@@ -22,20 +24,24 @@ public class ReverseArray {
         int[] reversedArray = ReverseArrayVlaues(nums);
         System.out.println("Reversed Array: " + Arrays.toString(reversedArray));
     }
+
     public static int[] ReverseArrayVlaues(int[] nums) {
-        int Left = 0;
-        int Right = nums.length - 1;
 
-        while (Left < Right) {
-            int temp = nums[Left];
-            nums[Left] = nums[Right];
-            nums[Right] = temp;
-            Left++;
-            Right--;
+        for (int i = 0; i < nums.length / 2; i++) {
+            int temp = nums[i];
+            nums[i] = nums[nums.length - 1 - i];
+            nums[nums.length - 1 - i] = temp;
         }
-
-        
-        
         return nums;
+        // int Left = 0;
+        // int Right = nums.length - 1;
+        // while (Left < Right) {
+        //     int temp = nums[Left];
+        //     nums[Left] = nums[Right];
+        //     nums[Right] = temp;
+        //     Left++;
+        //     Right--;
+        // }
+        // return nums;
     }
 }
