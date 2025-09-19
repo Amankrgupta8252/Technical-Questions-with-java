@@ -8,7 +8,8 @@ Output: 6  // substring = "abcdef"
 import java.util.*;
 
 public class Substring {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine(); //acdddabcdef
 
@@ -17,8 +18,8 @@ public class Substring {
         sc.close();
     }
 
-    public static int lengthOfLongestSubstring(String s){
-         
+    public static int lengthOfLongestSubstring(String s) {
+
         Set<Character> seen = new HashSet<>();
 
         for (int i = 0; i < s.length(); i++) {
@@ -27,17 +28,12 @@ public class Substring {
             }
         }
 
-        return seen.size(); 
+        return seen.size();
 
-        
     }
 }
 
-
-
-
 // import java.util.*;
-
 // public class Substring {
 //     public static void main(String[] args) {
 //         Scanner sc = new Scanner(System.in);
@@ -46,12 +42,10 @@ public class Substring {
 //         System.out.println(result);
 //         sc.close();
 //     }
-
 //     public static int lengthOfLongestSubstring(String s) {
 //         Set<Character> seen = new HashSet<>();
 //         int maxlength = 0;
 //         int i = 0, j = 0;
-
 //         while (j < s.length()) {
 //             if (!seen.contains(s.charAt(j))) {
 //                 seen.add(s.charAt(j));
@@ -62,7 +56,6 @@ public class Substring {
 //                 seen.remove(s.charAt(i));
 //                 i++;
 //             }
-
 //         }
 //         return maxlength;
 //     }

@@ -8,7 +8,9 @@ Output: 2
  */
 
 import java.util.*;
+
 public class CountEven {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of elements: ");
@@ -19,21 +21,22 @@ public class CountEven {
             nums[i] = sc.nextInt();
         }
         System.out.println("Input array: " + Arrays.toString(nums));
-        
+
         int evenCount = countEvenNumbers(nums);
         System.out.println("Count of even numbers: " + evenCount);
-        
+
         sc.close();
     }
 
     public static int countEvenNumbers(int[] nums) {
         int count = 0;
         for (int num : nums) {
-            if (num % 2 == 0) {
+            String str = String.valueOf(num);
+            if (str.length() % 2 == 0) {
                 count++;
             }
         }
         return count;
     }
-    
+
 }

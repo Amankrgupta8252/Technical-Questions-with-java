@@ -8,7 +8,9 @@ Output: 4 → 5 → 1 → 2 → 3
  */
 
 import java.util.*;
+
 public class RotateLinkedList {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of nodes in the linked list :");
@@ -26,6 +28,7 @@ public class RotateLinkedList {
         System.out.println("Linked List after rotation: " + result);
         sc.close();
     }
+
     public static LinkedList<Integer> rotateLinkedList(LinkedList<Integer> list, int k) {
         if (list.isEmpty() || k <= 0) {
             return list; // No rotation needed

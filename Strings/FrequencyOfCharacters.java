@@ -8,7 +8,9 @@ Output: a:2, b:1, c:3
  */
 
 import java.util.*;
+
 public class FrequencyOfCharacters {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
@@ -18,9 +20,10 @@ public class FrequencyOfCharacters {
         sc.close();
 
     }
+
     public static String CountCharOfString(String str) {
-        
-        for(int i = 0; i < str.length(); i++) {
+
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
             int count = 1;
             for (int j = i + 1; j < str.length(); j++) {
@@ -35,4 +38,3 @@ public class FrequencyOfCharacters {
         return str;
     }
 }
-

@@ -9,6 +9,7 @@ Output: 34
 import java.util.*;
 
 public class SecondLargestElement {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of elements in the array: ");
@@ -36,15 +37,18 @@ public class SecondLargestElement {
     public static int SecondLargestElementValue(int[] nums) {
         Arrays.sort(nums); // ascending
 
-        int largest = nums[nums.length - 2];
-        return largest;
+        int Seclargest = nums[nums.length - 2];
+        int largest = nums[nums.length - 1];
+        if (Seclargest == largest) {
+            Seclargest = nums[nums.length - 1];
+            for (int i = nums.length - 2; i >= 0; i--) {
+                if (nums[i] < largest) {
+                    Seclargest = nums[i];
+                    break;
+                }
+            }
 
-        // for (int i = nums.length - 2; i >= 0; i--) {
-        //     if (nums[i] < largest) {
-        //         return nums[i];
-        //     }
-        // }
-
-        // return Integer.MIN_VALUE; // sab element same the
+        }
+        return Seclargest;
     }
 }
